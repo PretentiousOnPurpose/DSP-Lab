@@ -1,0 +1,13 @@
+clc;
+clear all;
+close all;
+x=input('enter the 1st variable');
+y=input('enter the 2nd variable');
+z=input(' enter the number of samples');
+h=impz(x,y,z);
+disp(h);
+figure('name','MATLAB\impulse_diffeqn2\pratyush');
+stem(h);
+xlabel('sample');
+ylabel('amplitude');
+title('IMPULSE RESPONSE');

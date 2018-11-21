@@ -1,0 +1,24 @@
+clc;
+close all;
+clear all;
+figure('name','matlab/ift_function/pratyush')
+X=zeros(1,4);
+Y=zeros(1,4);
+N = 4;
+x=[0,1,2,3];
+Y=fft(x);
+X=ifft(Y);
+disp(X);
+disp(Y);
+subplot(4, 1, 1);
+stem(Y);
+title('Mag.Spectrum FFT');
+subplot(4, 1, 2);
+stem(angle(Y)*180/pi);
+title('Phase spectrum FFT');
+subplot(4, 1, 3);
+stem(abs(Y).^2);
+title('power spectrum FFT');
+subplot(4, 1, 4);
+stem(X);
+title('IFFT');

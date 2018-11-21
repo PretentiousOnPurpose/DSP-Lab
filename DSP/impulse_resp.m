@@ -1,0 +1,14 @@
+clc;
+close all;
+clear all;
+x1 = input('Enter numerator: ');
+x2 = input('Enter Denominator: ');
+x3 = input('Enter the impulse input');
+h = filter(x1,x2,x3);
+disp('Impulse response of second order diff Eqn:');
+disp(h);
+figure('name','matlab\pratyush\impulse_response');
+stem(h);
+xlabel('Sampling Time');
+ylabel('Amplitude');
+title('Impulse response using filter');
